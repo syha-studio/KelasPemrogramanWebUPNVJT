@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Contoh Program Javascript</title>
+    <style>
+      body {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      label {
+        margin: 10px;
+        padding: 5px;
+      }
+      input {
+        margin: 10px;
+        padding: 5px;
+      }
+      button {
+        text-align: center;
+        margin: 10px;
+        padding: 5px;
+      }
+    </style>
+    <script language="Javascript">
+      function konversi() {
+        var nama = document.getElementById("nama").value;
+        var nilai = document.kirim.angka.value;
+        var hasil = "";
+        if (nilai <= 40 && nilai >= 0) hasil = "E";
+        else if (nilai >= 41 && nilai <= 55) hasil = "D";
+        else if (nilai >= 56 && nilai <= 60) hasil = "C";
+        else if (nilai >= 61 && nilai <= 65) hasil = "BC";
+        else if (nilai >= 66 && nilai <= 70) hasil = "B";
+        else if (nilai >= 71 && nilai <= 80) hasil = "AB";
+        else if (nilai >= 81 && nilai <= 100) hasil = "A";
+        else hasil = "Input Error";
+        document.kirim.hasil.value = nama + " mendapatkan Nilai " + hasil;
+      }
+    </script>
+  </head>
+  <body>
+    <form name="kirim">
+      <label for="nama">Nama</label><br /><input type="text" name="nama" id="nama" placeholder="Nama" /> <br />
+      <label for="angka">Nilai</label><br /><input type="text" name="angka" id="angka" placeholder="Nilai" /> <br />
+      <input type="button" value="KONVERSIKAN" onclick="konversi()" /> <br /><input type="text" name="hasil" readonly />
+    </form>
+    <script language="JavaScript">
+      document.write("Dimodifikasi terakhir pada " + document.lastModified);
+    </script>
+  </body>
+</html>

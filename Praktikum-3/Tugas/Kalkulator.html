@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Contoh Program Javascript</title>
+    <style>
+      body {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      label {
+        margin: 10px;
+        padding: 5px;
+      }
+      input {
+        margin: 10px;
+        padding: 5px;
+      }
+      button {
+        text-align: center;
+        margin: 10px;
+        padding: 5px;
+      }
+    </style>
+    <script language="Javascript">
+      function Tambah() {
+        var angka1 = document.getElementById("angka1").value;
+        var angka2 = document.getElementById("angka2").value;
+        var hasil = parseInt(angka1) + parseInt(angka2);
+        document.kirim.hasil.value = hasil;
+      }
+      function Kurang() {
+        var angka1 = document.getElementById("angka1").value;
+        var angka2 = document.getElementById("angka2").value;
+        var hasil = angka1 - angka2;
+        document.kirim.hasil.value = hasil;
+      }
+      function Bagi() {
+        var angka1 = document.getElementById("angka1").value;
+        var angka2 = document.getElementById("angka2").value;
+        var hasil = angka1 / angka2;
+        document.kirim.hasil.value = hasil;
+      }
+      function Kali() {
+        var angka1 = document.getElementById("angka1").value;
+        var angka2 = document.getElementById("angka2").value;
+        var hasil = angka1 * angka2;
+        document.kirim.hasil.value = hasil;
+      }
+      function Reset() {
+        var angka1 = "";
+        var angka2 = "";
+        var hasil = "";
+        document.kirim.angka1.value = angka1;
+        document.kirim.angka2.value = angka2;
+        document.kirim.hasil.value = hasil;
+      }
+    </script>
+  </head>
+  <body>
+    <form name="kirim">
+      <label for="angka1">Angka 1</label><br /><input type="text" name="angka1" id="angka1" placeholder="angka 1" /> <br />
+      <label for="angka2">Angka 2</label><br /><input type="text" name="angka2" id="angka2" placeholder="angka 2" /> <br />
+      <input type="button" value="Tambah (+)" onclick="Tambah()" />
+      <input type="button" value="Kurang (-)" onclick="Kurang()" />
+      <input type="button" value="Kali (x)" onclick="Kali()" />
+      <input type="button" value="Bagi (/)" onclick="Bagi()" />
+      <input type="button" value="Reset" onclick="Reset()" />
+      <br /><input type="text" name="hasil" readonly />
+    </form>
+    <script language="JavaScript">
+      document.write("Dimodifikasi terakhir pada " + document.lastModified);
+    </script>
+  </body>
+</html>

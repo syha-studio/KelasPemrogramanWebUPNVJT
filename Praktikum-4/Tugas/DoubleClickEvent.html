@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="../jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#1").dblclick(function () {
+          if ($("#1").hasClass("kotak")) $("#1").attr("class", "Biru");
+          else $("#1").attr("class", "kotak");
+        });
+        $("#2").dblclick(function () {
+          if ($("#2").hasClass("kotak")) $("#2").attr("class", "Biru");
+          else $("#2").attr("class", "kotak");
+        });
+        $("#3").dblclick(function () {
+          if ($("#3").hasClass("kotak")) $("#3").attr("class", "Biru");
+          else $("#3").attr("class", "kotak");
+        });
+        $("#4").dblclick(function () {
+          if ($("#4").hasClass("kotak")) $("#4").attr("class", "Biru");
+          else $("#4").attr("class", "kotak");
+        });
+        $("#5").dblclick(function () {
+          if ($("#5").hasClass("kotak")) $("#5").attr("class", "Biru");
+          else $("#5").attr("class", "kotak");
+        });
+      });
+    </script>
+    <style>
+      body {
+        text-align: center;
+        background-color: bisque;
+      }
+      .Biru {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+      }
+      .container {
+        justify-content: center;
+        display: flex;
+        height: auto;
+      }
+      .kotak {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        background-color: gold;
+      }
+      p:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Klik 2 Kali untuk Merubah Warna</h2>
+    <div class="container">
+      <p class="kotak" id="1"></p>
+      <p class="kotak" id="2"></p>
+      <p class="kotak" id="3"></p>
+      <p class="kotak" id="4"></p>
+      <p class="kotak" id="5"></p>
+    </div>
+  </body>
+</html>
